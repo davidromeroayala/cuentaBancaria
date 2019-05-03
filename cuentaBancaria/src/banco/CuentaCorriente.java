@@ -15,8 +15,8 @@ public abstract class CuentaCorriente extends CuentaBancaria {
     
     protected Hashtable a;
 
-    public CuentaCorriente( Hashtable a, float saldo, Persona titular) {
-       super(saldo, titular);
+    public CuentaCorriente( Hashtable a, float saldo, Persona titular, String ccc) {
+      super(saldo, titular, ccc);
        
         this.a = new Hashtable(a.getNum(), a.getH());
     }
@@ -29,6 +29,13 @@ public abstract class CuentaCorriente extends CuentaBancaria {
 
     public void setA(Hashtable a) {
         this.a = new Hashtable(a.getNum(), a.getH());
+    }
+
+    @Override
+    public void imprimir() {
+        super.imprimir();
+        System.out.println("");
+        
     }
 
  

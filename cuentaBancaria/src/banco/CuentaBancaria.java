@@ -14,9 +14,9 @@ public abstract class CuentaBancaria implements Imprimible {
 
     protected float saldo;
     protected Persona titular;
-    protected int ccc;
+    protected String ccc;
 
-    public CuentaBancaria(float saldo, Persona titular,int ccc) {
+    public CuentaBancaria(float saldo, Persona titular,String ccc) {
         this.saldo = saldo;
         this.ccc=ccc;
         this.titular = new Persona(titular.getNombre(), titular.getApellidos(), titular.getNacimiento());
@@ -24,7 +24,8 @@ public abstract class CuentaBancaria implements Imprimible {
 
     @Override
     public void imprimir() {
-        System.out.println("Bienvenido a su banco Online estos son sus datos");
+        titular.imprimir();
+        System.out.print(saldo  +" "+ ccc +" " );
     }
 
     public float getSaldo() {

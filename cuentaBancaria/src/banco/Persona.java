@@ -48,7 +48,8 @@ public final class Persona implements Imprimible {
 
     @Override
     public void imprimir() {
-        System.out.println("Bienvenido a su banco Online estos son sus datos");
+        System.out.println("**************************************************************************");
+        System.out.print(nombre +" "+apellidos +" "+ nacimiento +" ");
     }
 
 }

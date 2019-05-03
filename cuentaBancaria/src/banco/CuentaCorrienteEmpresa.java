@@ -15,10 +15,16 @@ public final class CuentaCorrienteEmpresa extends CuentaCorriente {
     private float descubierto;
     private float maximo;
 
-    public CuentaCorrienteEmpresa(float descubierto, float maximo, int cuenta, Hashtable a, float saldo, Persona titular) {
-        super(cuenta, a, saldo, titular);
+    public CuentaCorrienteEmpresa(float descubierto, float maximo, Hashtable a, float saldo, Persona titular,String ccc) {
+        super(a, saldo, titular, ccc);
         this.descubierto = descubierto;
         this.maximo = maximo;
     }
 
+    @Override
+    public void imprimir() {
+        super.imprimir();
+        System.out.println("Cuenta Corriente Empresa" +" Tipo de interés por descubierto "+descubierto+"Máximo descubierto permitido "+maximo );
+    }
+    
 }

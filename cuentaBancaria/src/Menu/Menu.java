@@ -23,7 +23,14 @@ public  class Menu {
     }
    public static void añadirPersona() {
         System.out.println("**************Nuevo Titular.**************");
-        System.out.println("Introduce el nombre, el apellido,fecha nacimiento");
+       
+        
+    }
+   public static void cuentaNueva() {
+        System.out.println("**************Nueva Cuenta.**************");
+       System.out.println("1.- Cuenta Ahorro.");
+        System.out.println("2.- Cuenta Corriente Personal.");
+        System.out.println("3.- Cuenta Corriente Empresa.");
         
     }
 }

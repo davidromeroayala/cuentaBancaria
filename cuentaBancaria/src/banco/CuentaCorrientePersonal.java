@@ -14,8 +14,8 @@ public final class CuentaCorrientePersonal extends CuentaCorriente {
 
     private float comision;
 
-    public CuentaCorrientePersonal(float comision, int cuenta, Hashtable a, float saldo, Persona titular) {
-        super(cuenta, a, saldo, titular);
+    public CuentaCorrientePersonal(float comision, Hashtable a, float saldo, Persona titular,String ccc) {
+        super(a, saldo, titular, ccc);
         this.comision = comision;
     }
 
@@ -26,5 +26,12 @@ public final class CuentaCorrientePersonal extends CuentaCorriente {
     public void setComision(float comision) {
         this.comision = comision;
     }
+
+    @Override
+    public void imprimir() {
+        super.imprimir(); 
+        System.out.println("Cuenta Corriente Personal" +"comision = "+comision);
+    }
+    
 
 }
